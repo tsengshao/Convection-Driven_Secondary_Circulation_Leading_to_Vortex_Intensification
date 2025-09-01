@@ -26,7 +26,9 @@ All required data and scripts are available on [Zenodo](#) (link to be added).
 3. Install [OpenGrADS](http://opengrads.org).
 4. Create the Python environment using [Miniconda](https://docs.conda.io/en/latest/miniconda.html):  
    ```bash
-   conda env create -f environment.yml
+   conda env create --name=py311 -f environment.yml
+   # or 
+   conda create --name py311 --file explicit_env.txt
    ```
 
 --- 
