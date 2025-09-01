@@ -27,11 +27,16 @@ All required data and scripts are available on [Zenodo](#) (link to be added).
 4. Create the Python environment using [Miniconda](https://docs.conda.io/en/latest/miniconda.html):  
    ```bash
    conda env create -f environment.yml
+   ```
 
 --- 
 
 ## Usage
 In each figure directory, execute the provided bash script:
-`./run.sh` or `./run_draw.sh`
+```
+./run.sh
+# or
+./run_draw.sh
+```
 
-__
+---
