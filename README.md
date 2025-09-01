@@ -41,4 +41,6 @@ All required data and scripts are available on [Zenodo](#) (link to be added).
    ./run_draw.sh
    ```
 
+   for fig 11:
+   open session (`.vs3`) in VAPOR
 ---
