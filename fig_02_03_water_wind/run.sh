@@ -16,7 +16,6 @@ gslist="draw_water.gs draw_wind.gs"
 for gs in ${gslist};do
   for iexp in 2 3 9 19;do
     echo ${iexp}
-    grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 1 -te 1"
     grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 217 -te 217"
   done
   
