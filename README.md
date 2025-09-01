@@ -1,20 +1,37 @@
 # Instruction
 
-Code to reproduce figures from the paper  
-*"The Dependence Moist Vortex Intensification on Convection-Induced Moisture Distribution and Low-level Inflow: Insights for Tropical Cyclone Seed Genesis"*
+This repository contains code to reproduce the figures from the paper:
 
-This project include Python scripts (`*.py`) and GrADS scripts (`*.gs`).
-Parts of the code rely on functions from my other repo: [grads-library](https://github.com/kuantingkuo/grads-library).
+**"The Dependence of Moist Vortex Intensification on Convection-Induced Moisture Distribution and Low-level Inflow: Insights for Tropical Cyclone Seed Genesis"**
+
+The project includes:
+- Python scripts (`*.py`)
+- GrADS scripts (`*.gs`)
+- NCAR VAPOR scripts
+
+Some scripts rely on external functions from the repository [gscript](https://github.com/kodamail/gscript).
+
+---
 
 ## Data
 
-Data can be downloaded from Zenodo:  
+All required data and scripts are available on [Zenodo](#) (link to be added).
+
+---
 
 ## Setup
 
-- Update `DATA_ROOT` in the scripts to point to your local data folder.  
-- Set the environment variable `GASCRP` to your local `grads-library` path.
+1. Place the `./data` folder in the project directory.
+2. Set the environment variable `GASCRP` to your local `gscript` path.
+3. Install [OpenGrADS](http://opengrads.org).
+4. Create the Python environment using [Miniconda](https://docs.conda.io/en/latest/miniconda.html):  
+   ```bash
+   conda env create -f environment.yml
+
+--- 
 
 ## Usage
+In each figure directory, execute the provided bash script:
+`./run.sh` or `./run_draw.sh`
 
----
+__
