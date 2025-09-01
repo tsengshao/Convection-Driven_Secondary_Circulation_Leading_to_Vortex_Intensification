@@ -36,11 +36,12 @@ All required data and scripts are available on [Zenodo](#) (link to be added).
 ## Usage
    In each figure directory, execute the provided bash script:
    ```
+   # fig 01~10
    ./run.sh
    # or
    ./run_draw.sh
-   ```
 
-   for fig 11:
+   # fig 11
    open session (`.vs3`) in VAPOR
+   ```
 ---
