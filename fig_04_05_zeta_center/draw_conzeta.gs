@@ -64,7 +64,7 @@ if (ts='none'); ts=1; endif
 if (te='none'); te=tlast; endif
 if (te>tlast);  te=tlast; endif
 
-outPath='./whi_fig_conzeta/'exp
+outPath='./fig_conzeta/'exp
 '! mkdir -p 'outPath
 
 ******** write the status *******
