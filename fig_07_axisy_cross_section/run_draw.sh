@@ -6,7 +6,7 @@ conda activate py311
 ## py='draw_radi_wind_one_daily.py'
 ## py='draw_tang_wind_one_daily.py'
 ## py='draw_mse_ccc_daily.py'
-pylist='draw_mse_ccc_daily.py draw_radi_wind_one_daily.py'
+pylist='draw_mse_ccc_daily.py draw_radi_wind_one_daily.py draw_tang_wind_one_daily.py'
 
 for py in ${pylist};do
    for i in 0 1 2 8 18;do

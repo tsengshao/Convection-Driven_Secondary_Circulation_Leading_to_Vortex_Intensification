@@ -31,9 +31,9 @@ center_flag='czeta0km_positivemean'
 fig_flag   ='hov_inflow'
 datdir=config.dataPath+f"/axisy/{center_flag}/{exp}/"
 if iswhite:
-  figdir=f'./{center_flag}_white/{fig_flag}/'
+  figdir=f'./fig_{center_flag}_white/{fig_flag}/'
 else:
-  figdir=f'./{center_flag}/{fig_flag}/'
+  figdir=f'./fig_{center_flag}/{fig_flag}/'
 os.system(f'mkdir -p {figdir}')
 
 vvmLoader = VVMLoader(f"{config.vvmPath}/{exp}/", subName=exp)

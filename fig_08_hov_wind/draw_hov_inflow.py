@@ -31,9 +31,9 @@ center_flag='czeta0km_positivemean'
 fig_flag   ='hov_inflow'
 datdir=config.dataPath+f"/axisy/{center_flag}/{exp}/"
 if iswhite:
-  figdir=f'./{center_flag}_white/{fig_flag}/'
+  figdir=f'./fig_{center_flag}_white/{fig_flag}/'
 else:
-  figdir=f'./{center_flag}/{fig_flag}/'
+  figdir=f'./fig_{center_flag}/{fig_flag}/'
 os.system(f'mkdir -p {figdir}')
 
 vvmLoader = VVMLoader(f"{config.vvmPath}/{exp}/", subName=exp)
@@ -135,16 +135,16 @@ plt.ylabel(f'simulation time [{time_units}]')
 plt.title(f'{config.expdict[exp]}', loc='left', fontweight='bold', fontsize=20)
 plt.savefig(f'{figdir}/{varname}_{exp}.png', dpi=200, transparent=True)
 
-plt.figure(figsize=(20,8))
-plt.plot(time_1d, np.min(var, axis=1))
-plt.xticks(np.arange(0,time_1d.max()+0.0001,1))
-plt.xlim(0, time_1d.max())
-plt.grid(True)
-plt.title(f'{config.expdict[exp]}', loc='left', fontweight='bold', fontsize=20)
-plt.ylabel(f'minumn \n{varname} [m/s]')
-plt.xlabel('time [day]')
-plt.tight_layout()
-plt.savefig(f'{figdir}/series_{varname}_{exp}.png', dpi=200, transparent=True)
+## plt.figure(figsize=(20,8))
+## plt.plot(time_1d, np.min(var, axis=1))
+## plt.xticks(np.arange(0,time_1d.max()+0.0001,1))
+## plt.xlim(0, time_1d.max())
+## plt.grid(True)
+## plt.title(f'{config.expdict[exp]}', loc='left', fontweight='bold', fontsize=20)
+## plt.ylabel(f'minumn \n{varname} [m/s]')
+## plt.xlabel('time [day]')
+## plt.tight_layout()
+## plt.savefig(f'{figdir}/series_{varname}_{exp}.png', dpi=200, transparent=True)
 
 plt.close('all')
 

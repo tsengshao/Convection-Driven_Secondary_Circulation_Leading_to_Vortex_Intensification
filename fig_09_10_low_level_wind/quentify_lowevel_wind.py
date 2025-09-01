@@ -49,16 +49,17 @@ tag = 'inflow_daily'
 #tag = 'inflow_snapshot'
 mdict = method_dict[tag]
 if iswhite:
-  figdir = f'./{center_flag}_sep_white/{tag}/'
+  figdir = f'./fig09_{center_flag}_sep_white/{tag}/'
 else:
-  figdir = f'./{center_flag}_sep/{tag}/'
+  figdir = f'./fig09_{center_flag}_sep/{tag}/'
 os.system(f'mkdir -p {figdir}')
 
 udraw.set_figure_defalut() 
 if not iswhite:
   udraw.set_black_background()
 
-for iexp in range(1, nexp):
+#for iexp in range(1, nexp):
+for iexp in [1,2,8,18]:
   exp = explist[iexp]
   rday = rday_1d[iexp]
   func = float if rday%1 > 0 else int

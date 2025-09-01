@@ -50,9 +50,9 @@ tag = 'inflow_daily'
 #tag = 'inflow_snapshot'
 mdict = method_dict[tag]
 if iswhite:
-  figdir = f'./{center_flag}_white/{tag}/'
+  figdir = f'./fig10_{center_flag}_white/{tag}/'
 else:
-  figdir = f'./{center_flag}/{tag}/'
+  figdir = f'./fig10_{center_flag}/{tag}/'
 os.system(f'mkdir -p {figdir}')
 
 udraw.set_figure_defalut() 
@@ -137,5 +137,5 @@ plt.grid(True)
 plt.xlabel(f'maximum radial wind\n{mdict["scatter_x_label"]} [m/s]')
 plt.ylabel('maximum tangential wind\nlast day average [m/s]')
 plt.savefig(f'{figdir}/scatter_max_radi.png', dpi=200)
-plt.show()
+#plt.show()
 

@@ -41,9 +41,9 @@ center_flag='czeta0km_positivemean'
 fig_flag   ='hov_inflow_f00_4dy'
 datdir=config.dataPath+f"/axisy/{center_flag}/{exp}/"
 if iswhite:
-  figdir=f'./{center_flag}_white/{fig_flag}/'
+  figdir=f'./fig_{center_flag}_white/{fig_flag}/'
 else:
-  figdir=f'./{center_flag}/{fig_flag}/'
+  figdir=f'./fig_{center_flag}/{fig_flag}/'
 os.system(f'mkdir -p {figdir}')
 
 vvmLoader = VVMLoader(f"{config.vvmPath}/{exp}/", subName=exp)
@@ -147,6 +147,6 @@ fig, ax = plt.subplots(figsize=(12, 1), layout='constrained')
 CB=fig.colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap),
              cax=ax, orientation='horizontal')
 CB.ax.set_xticks(levels, list(map(str, levels)))
-plt.savefig(f'./{figdir}/hov_colorbar.png',dpi=200, transparent=True)
+plt.savefig(f'{figdir}/hov_colorbar.png',dpi=200, transparent=True)
 plt.close('all')
 

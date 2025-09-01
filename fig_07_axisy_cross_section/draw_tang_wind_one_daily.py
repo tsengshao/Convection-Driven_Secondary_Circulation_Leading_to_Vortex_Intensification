@@ -34,9 +34,9 @@ center_flag='czeta0km_positivemean'
 fig_flag   ='tang_wind_one_daily'
 datdir=config.dataPath+f"/axisy/{center_flag}/{exp}/"
 if iswhite:
-  figdir=f'./{center_flag}_white/{fig_flag}/{exp}/'
+  figdir=f'./fig_{center_flag}_white/{fig_flag}/{exp}/'
 else:
-  figdir=f'./{center_flag}/{fig_flag}/{exp}/'
+  figdir=f'./fig_{center_flag}/{fig_flag}/{exp}/'
 os.system(f'mkdir -p {figdir}')
 
 vvmLoader = VVMLoader(f"{config.vvmPath}/{exp}/", subName=exp)
@@ -50,8 +50,15 @@ idy_start, idy_end =  tools.get_mpi_time_span(0, nt, cpuid, nproc)
 
 it=216
 it=72*3
-for idy in range(idy_start, idy_end):
-#for idy in [0, 2, 9, 19, 24, 29]:
+#idy_start, idy_end =  tools.get_mpi_time_span(0, nt, cpuid, nproc)
+#for idy in range(idy_start, idy_end):
+
+if exp=='RRCE_3km_f00':
+    idy_list=[0,9,19,29]
+else:
+    idy_list=[2]
+
+for idy in idy_list:
   print(idy)
   if idy > nt: continue
 
