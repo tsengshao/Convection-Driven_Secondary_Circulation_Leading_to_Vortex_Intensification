@@ -7,7 +7,7 @@ This repository contains code to reproduce the figures from the paper:
 The project includes:
 - Python scripts (`*.py`)
 - GrADS scripts (`*.gs`)
-- NCAR VAPOR scripts
+- NCAR VAPOR scripts (`.vs3`)
 
 Some scripts rely on external functions from the repository [gscript](https://github.com/kodamail/gscript).
 
@@ -23,7 +23,7 @@ All required data and scripts are available on [Zenodo](#) (link to be added).
 
 1. Place the `./data` folder in the project directory.
 2. Set the environment variable `GASCRP` to your local `gscript` path.
-3. Install [OpenGrADS](http://opengrads.org).
+3. Install [OpenGrADS](http://opengrads.org) and [NCAR VAPOR](https://www.vapor.ucar.edu).
 4. Create the Python environment using [Miniconda](https://docs.conda.io/en/latest/miniconda.html):  
    ```bash
    conda env create --name=py311 -f environment.yml
@@ -34,11 +34,11 @@ All required data and scripts are available on [Zenodo](#) (link to be added).
 --- 
 
 ## Usage
-In each figure directory, execute the provided bash script:
-```
-./run.sh
-# or
-./run_draw.sh
-```
+   In each figure directory, execute the provided bash script:
+   ```
+   ./run.sh
+   # or
+   ./run_draw.sh
+   ```
 
 ---
