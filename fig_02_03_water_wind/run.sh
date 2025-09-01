@@ -9,16 +9,19 @@
 
 source ~/.bashrc
 mode="SAVEFIG"
-gs="draw_water.gs"
-gs="draw_wind.gs"
+#gs="draw_water.gs"
+#gs="draw_wind.gs"
+gslist="draw_water.gs draw_wind.gs"
 
-for iexp in 2 3 9 19;do
-  echo ${iexp}
-  grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 1 -te 1"
-  grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 217 -te 217"
-done
-
-for ts in 1 721 1441 2161;do
-  iexp=1
-  grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts ${ts} -te ${ts}"
+for gs in ${gslist};do
+  for iexp in 2 3 9 19;do
+    echo ${iexp}
+    grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 1 -te 1"
+    grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 217 -te 217"
+  done
+  
+  for ts in 1 721 1441 2161;do
+    iexp=1
+    grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts ${ts} -te ${ts}"
+  done
 done

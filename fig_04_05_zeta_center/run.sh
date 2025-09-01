@@ -9,16 +9,20 @@
 
 source ~/.bashrc
 mode="SAVEFIG"
-gs="draw_zeta.gs"
-gs="draw_conzeta.gs"
+#gs="draw_zeta.gs"
+#gs="draw_conzeta.gs"
+gslist="draw_zeta.gs draw_conzeta.gs"
 
-for iexp in 2 3 9 19;do
-  echo ${iexp}
-  grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 1 -te 1"
-  grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 217 -te 217"
+for gs in ${gslist};do
+  for iexp in 2 3 9 19;do
+    echo ${iexp}
+    grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 1 -te 1"
+    grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts 217 -te 217"
+  done
+
+  for ts in 1 721 1441 2161;do
+    iexp=1
+    grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts ${ts} -te ${ts}"
+  done
 done
 
-for ts in 1 721 1441 2161;do
-  iexp=1
-  grads -blcx "run ${gs} ${iexp} -mode ${mode} -ts ${ts} -te ${ts}"
-done

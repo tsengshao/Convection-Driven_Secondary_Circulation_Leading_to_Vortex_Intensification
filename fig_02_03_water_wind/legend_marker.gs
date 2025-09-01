@@ -1,1 +1,1 @@
-../fig_03_04_zeta_center/legend_marker.gs
+../util/legend_marker.gs
