@@ -15,13 +15,19 @@ Some scripts rely on external functions from the repository [gscript](https://gi
 
 ## Data
 
-All required data and scripts are available on [Zenodo](#) (link to be added).
+All required data and scripts are available on [Zenodo](https://doi.org/10.5281/zenodo.17023680).
+After downloading, unzip the archive `data.tar.gz` and rename (or place) it as the `data/` folder in the project directory:
+
 
 ---
 
 ## Setup
 
-1. Place the `./data` folder in the project directory.
+1. After downloading, unzip the archive `data.tar.gz` and rename (or place) it as the `./data` folder in the project directory.
+    ```bash
+    tar -xvzf data.tar.gz
+    mv data <project_root>/data
+    ```
 2. Set the environment variable `GASCRP` to your local `gscript` path.
 3. Install [OpenGrADS](http://opengrads.org) and [NCAR VAPOR](https://www.vapor.ucar.edu).
 4. Create the Python environment using [Miniconda](https://docs.conda.io/en/latest/miniconda.html):  
