@@ -54,7 +54,7 @@ it=72*3
 #for idy in range(idy_start, idy_end):
 
 if exp=='RRCE_3km_f00':
-    idy_list=[0,9,19,29]
+    idy_list=[0,9,19,24,29]
 else:
     idy_list=[2]
 

@@ -59,7 +59,7 @@ if not iswhite:
   udraw.set_black_background()
 
 #for iexp in range(1, nexp):
-for iexp in [1,2,8,18]:
+for iexp in [1,2,8,13,18]:
   exp = explist[iexp]
   rday = rday_1d[iexp]
   func = float if rday%1 > 0 else int
