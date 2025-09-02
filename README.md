@@ -16,7 +16,6 @@ Some scripts rely on external functions from the repository [gscript](https://gi
 ## Data
 
 All required data and scripts are available on [Zenodo](https://doi.org/10.5281/zenodo.17023680).
-After downloading, unzip the archive `data.tar.gz` and rename (or place) it as the `data/` folder in the project directory:
 
 
 ---
