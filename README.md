@@ -15,7 +15,7 @@ Some scripts rely on external functions from the repository [gscript](https://gi
 
 ## Data
 
-All required data and scripts are available on [Zenodo](10.5281/zenodo.17038571
+All required data and scripts are available on [Zenodo] (https://doi.org/10.5281/zenodo.17038571
 ).
 Tseng, S.-Y. (2025). [Dataset] The Dependence of Moist Vortex Intensification on Convection-Induced Moisture Distribution and Low-Level Inflow: Insights for Tropical Cyclone Seed Genesis [Data set].
 
