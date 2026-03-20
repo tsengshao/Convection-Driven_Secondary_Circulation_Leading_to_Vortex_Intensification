@@ -250,6 +250,6 @@ plt.xlabel(f'Day')
 plt.xlim(0,nt_daily+1)
 plt.tight_layout()
 plt.savefig(f'{figPath}/{exp}_{method}_{target_lev:.0f}m_daily.png',dpi=250)
-plt.show()
+#plt.show()
 plt.close('all')
     
