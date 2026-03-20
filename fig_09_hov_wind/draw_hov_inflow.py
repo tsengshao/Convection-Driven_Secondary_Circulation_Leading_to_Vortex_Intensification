@@ -29,7 +29,7 @@ dtime = 20
 
 center_flag='czeta0km_positivemean'
 fig_flag   ='hov_inflow'
-datdir=config.dataPath+f"/axisy/{center_flag}/{exp}/"
+datdir=f"../data/axisy/{center_flag}/{exp}/"
 if iswhite:
   figdir=f'./fig_{center_flag}_white/{fig_flag}/'
 else:
@@ -77,14 +77,23 @@ udraw.set_figure_defalut()
 if not iswhite:
   udraw.set_black_background()
 
-varname = 'tang_wind'
+varname = 'radi_wind'
 varunits = 'm/s'
-var     = twind_lower[0]
-var_ax  = twind_lower[1]
+var     = rwind_lower[0]
+var_ax  = rwind_lower[1]
 levels  = [-10, -5, -3, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5,  2, 3, 5, 10]
 inner_length = 10 #km
 indxinner = np.argmin(np.abs(radius_1d-inner_length))
 loc_maxconv = radius_1d[np.argmax(conv_lower[0,:,indxinner:], axis=1)+indxinner]
+
+# varname = 'tang_wind'
+# varunits = 'm/s'
+# var     = twind_lower[0]
+# var_ax  = twind_lower[1]
+# levels  = [-10, -5, -3, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5,  2, 3, 5, 10]
+# inner_length = 10 #km
+# indxinner = np.argmin(np.abs(radius_1d-inner_length))
+# loc_maxconv = radius_1d[np.argmax(conv_lower[0,:,indxinner:], axis=1)+indxinner]
 
 fig, ax = plt.subplots(figsize=figsize)
 cmap = udraw.get_cmap('pwo')
