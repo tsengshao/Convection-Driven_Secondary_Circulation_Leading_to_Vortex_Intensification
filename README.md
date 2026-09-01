@@ -2,7 +2,7 @@
 
 This repository contains code to reproduce the figures from the paper:
 
-**"The Dependence of Moist Vortex Intensification on Convection-Induced Moisture Distribution and Low-level Inflow: Insights for Tropical Cyclone Seed Genesis"**
+Tseng, S.-Y., Lu, K.-Y., Wu, C.-M., & Chen, W.-T. (2026). **The dependence of moist vortex intensification on convection-induced moisture distribution and low-level inflow: Insights for tropical cyclone seed genesis.** Journal of Geophysical Research: Atmospheres, 131, e2025JD045526. https://doi.org/10.1029/2025JD045526
 
 The project includes:
 - Python scripts (`*.py`)
